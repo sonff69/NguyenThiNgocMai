@@ -19,7 +19,7 @@
             --glass-bg: rgba(10, 4, 18, 0.15); 
             --glass-border: rgba(255, 255, 255, 0.15);
             --text-main: #ffffff;
-            --text-sub: #f0f0f0;
+            --text-sub: #f5f5f5;
             --font-serif: 'Lora', serif;
             --font-sans: 'Inter', sans-serif;
         }
@@ -70,8 +70,8 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: radial-gradient(circle at 20% 30%, rgba(255, 141, 161, 0.2), transparent 60%),
-                        radial-gradient(circle at 80% 80%, rgba(179, 157, 219, 0.2), transparent 60%);
+            background: radial-gradient(circle at 20% 30%, rgba(255, 141, 161, 0.25), transparent 60%),
+                        radial-gradient(circle at 80% 80%, rgba(179, 157, 219, 0.25), transparent 60%);
             z-index: -2;
             pointer-events: none;
         }
@@ -541,7 +541,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(4, 1, 10, 0.55);
+            background: rgba(6, 2, 12, 0.5);
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur(25px);
             z-index: 1000;
@@ -846,37 +846,6 @@
             display: flex;
             flex-direction: column;
             gap: 0.6rem;
-        }
-
-        /* Reflection Section */
-        section.reflection {
-            padding: 5rem 0;
-        }
-
-        .reflection-content {
-            padding: 3.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .reflection-quote {
-            font-family: var(--font-serif);
-            font-size: 1.6rem;
-            font-style: italic;
-            border-left: 4px solid var(--primary-pink);
-            padding-left: 1.8rem;
-            color: var(--text-sub);
-            line-height: 1.4;
-        }
-
-        .reflection-text {
-            color: var(--text-sub);
-            font-size: 1.05rem;
-            text-align: justify;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
         }
 
         /* Visual File Explorer Simulation for Assignment 1 */
@@ -1184,10 +1153,10 @@
                 <div class="assignment-card glass-panel reveal" data-category="base">
                     <div class="assignment-body">
                         <div class="asg-meta">
-                            <span>Bài tập 01</span>
+                            <span>Bài tập 1 • Mục 1.4</span>
                             <span>Windows</span>
                         </div>
-                        <h3>Quản lý tệp tin & thư mục trên Windows</h3>
+                        <h3>Thao tác cơ bản với tệp tin và thư mục</h3>
                         <p class="summary">Thực hành 12 bước chuẩn hóa lưu trữ tập tin và thư mục khoa học trên hệ điều hành Windows, loại bỏ thói quen quản lý tệp bừa bãi và phòng tránh các rủi ro hệ thống.</p>
                         <div class="card-footer">
                             <button class="details-trigger" onclick="openDrawer('drawer-b1')">Tìm hiểu chi tiết 12 bước →</button>
@@ -1199,10 +1168,10 @@
                 <div class="assignment-card glass-panel reveal" data-category="base">
                     <div class="assignment-body">
                         <div class="asg-meta">
-                            <span>Bài tập 02</span>
+                            <span>Bài tập 2 • Mục 2.4</span>
                             <span>SLA / ELT</span>
                         </div>
-                        <h3>Tìm kiếm & Đánh giá 10 nguồn tài liệu học thuật</h3>
+                        <h3>Tìm kiếm và đánh giá thông tin học thuật</h3>
                         <p class="summary">Hệ thống hóa bộ lọc thông tin học thuật thông qua bảng tổng hợp đánh giá sâu sắc 10 tài liệu kinh điển ngành Thụ đắc ngôn ngữ thứ hai (SLA/ELT).</p>
                         <div class="card-footer">
                             <button class="details-trigger" onclick="openDrawer('drawer-b2')">Khám phá bảng đánh giá →</button>
@@ -1214,10 +1183,10 @@
                 <div class="assignment-card glass-panel reveal" data-category="prompt">
                     <div class="assignment-body">
                         <div class="asg-meta">
-                            <span>Bài tập 03</span>
+                            <span>Bài tập 2 • Mục 3.4</span>
                             <span>Prompting</span>
                         </div>
-                        <h3>Kỹ nghệ Prompt hiệu quả cho các tác vụ học tập</h3>
+                        <h3>Viết Prompt hiệu quả cho các tác vụ học tập</h3>
                         <p class="summary">Thực hành tối ưu phản hồi của Claude (Anthropic) qua 3 tác vụ học tập học thuật đặc trưng nhờ các kỹ thuật Roleplay, Chain-of-Thought và Few-shot.</p>
                         <div class="card-footer">
                             <button class="details-trigger" onclick="openDrawer('drawer-b3')">Xem 9 mẫu Prompt thử nghiệm →</button>
@@ -1229,10 +1198,10 @@
                 <div class="assignment-card glass-panel reveal" data-category="collab">
                     <div class="assignment-body">
                         <div class="asg-meta">
-                            <span>Bài tập 04</span>
+                            <span>Bài tập 3 • Mục 4.4</span>
                             <span>Collaboration</span>
                         </div>
-                        <h3>Ứng dụng công cụ hợp tác cho dự án nhóm</h3>
+                        <h3>Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm</h3>
                         <p class="summary">Tối ưu hiệu quả làm việc nhóm trong học phần Language & Media (Langmed). Khai thác triệt để hệ thống kết nối Trello, Docs, Drive và MS Teams.</p>
                         <div class="card-footer">
                             <button class="details-trigger" onclick="openDrawer('drawer-b4')">Đọc phân tích sâu →</button>
@@ -1244,10 +1213,10 @@
                 <div class="assignment-card glass-panel reveal" data-category="collab">
                     <div class="assignment-body">
                         <div class="asg-meta">
-                            <span>Bài tập 05</span>
+                            <span>Bài tập 2 • Mục 5.4</span>
                             <span>Generative AI</span>
                         </div>
-                        <h3>Sử dụng AI tạo sinh hỗ trợ sáng tạo nội dung số</h3>
+                        <h3>Sử dụng công cụ AI tạo sinh để hỗ trợ sáng tạo nội dung</h3>
                         <p class="summary">Hóa thân làm nhà biên tập thiết kế slide "Ngành Ngôn ngữ Anh" phối hợp mượt mà Claude, Bing Image Creator và Canva AI cùng sự kiểm duyệt của con người.</p>
                         <div class="card-footer">
                             <button class="details-trigger" onclick="openDrawer('drawer-b5')">Khám phá quy trình →</button>
@@ -1259,10 +1228,10 @@
                 <div class="assignment-card glass-panel reveal" data-category="collab">
                     <div class="assignment-body">
                         <div class="asg-meta">
-                            <span>Bài tập 06</span>
+                            <span>Bài tập 4 • Mục 6.4</span>
                             <span>AI Ethics</span>
                         </div>
-                        <h3>Sử dụng AI có trách nhiệm học thuật</h3>
+                        <h3>Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</h3>
                         <p class="summary">Thiết lập quy trình viết luận thông minh dài 1500 từ và bộ 7 nguyên tắc đạo đức cốt lõi nhằm ngăn chặn "nhận thức hộ" (cognitive offloading).</p>
                         <div class="card-footer">
                             <button class="details-trigger" onclick="openDrawer('drawer-b6')">Bảo vệ tính liêm chính →</button>
@@ -1355,7 +1324,7 @@
         <div class="drawer-content">
             <button class="close-drawer" onclick="closeDrawer('drawer-b1')">✕</button>
             <div class="drawer-body">
-                <h2>Quản lý tệp tin & thư mục trên Windows</h2>
+                <h2>Thao tác cơ bản với tệp tin và thư mục (Mục 1.4 - Bài tập 1)</h2>
                 <div class="drawer-section">
                     <h4>Mục tiêu thực hành</h4>
                     <p>Rèn luyện kỹ năng tổ chức, quản lý tập tin khoa học trên hệ điều hành Windows thông qua các thao tác chuẩn chỉnh, hạn chế tối đa rủi ro mất tài liệu học tập.</p>
@@ -1482,7 +1451,7 @@
         <div class="drawer-content">
             <button class="close-drawer" onclick="closeDrawer('drawer-b2')">✕</button>
             <div class="drawer-body">
-                <h2>Tìm kiếm & Đánh giá 10 nguồn học thuật (SLA/ELT)</h2>
+                <h2>Tìm kiếm và đánh giá thông tin học thuật (Mục 2.4 - Bài tập 2)</h2>
                 <div class="drawer-section">
                     <h4>Mục tiêu học thuật</h4>
                     <p>Xây dựng hệ thống tiêu chuẩn đánh giá tính khoa học, độ tin cậy thực chứng của các tài liệu phục vụ nghiên cứu phương pháp giảng dạy tiếng Anh như ngôn ngữ thứ hai.</p>
@@ -1599,7 +1568,7 @@
         <div class="drawer-content">
             <button class="close-drawer" onclick="closeDrawer('drawer-b3')">✕</button>
             <div class="drawer-body">
-                <h2>Kỹ nghệ Prompt hiệu quả cho các tác vụ học tập</h2>
+                <h2>Viết Prompt hiệu quả cho các tác vụ học tập (Mục 3.4 - Bài tập 2)</h2>
                 <div class="drawer-section">
                     <h4>Mục tiêu thực hành</h4>
                     <p>Sử dụng Claude (Anthropic) làm công cụ hỗ trợ tư duy, thực nghiệm phương pháp so sánh các cấp độ Prompt để đúc rút các nguyên lý Prompt Engineering tối ưu nhất.</p>
@@ -1693,7 +1662,7 @@
         <div class="drawer-content">
             <button class="close-drawer" onclick="closeDrawer('drawer-b4')">✕</button>
             <div class="drawer-body">
-                <h2>Ứng dụng công cụ hợp tác cho dự án nhóm (Langmed)</h2>
+                <h2>Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm (Mục 4.4 - Bài tập 3)</h2>
                 <div class="drawer-section">
                     <h4>Mục tiêu dự án nhóm</h4>
                     <p>Ứng dụng bộ 4 công cụ trực tuyến Trello, Google Docs, Google Drive và Microsoft Teams để nâng cao hiệu suất cộng tác môn Language & Media (Langmed), phân công nhiệm vụ mảng <code>Interview Analysis & Script</code>.</p>
@@ -1754,7 +1723,7 @@
         <div class="drawer-content">
             <button class="close-drawer" onclick="closeDrawer('drawer-b5')">✕</button>
             <div class="drawer-body">
-                <h2>Sử dụng AI tạo sinh hỗ trợ sáng tạo nội dung số</h2>
+                <h2>Sử dụng công cụ AI tạo sinh để hỗ trợ sáng tạo nội dung (Mục 5.4 - Bài tập 2)</h2>
                 <div class="drawer-section">
                     <h4>Mục tiêu thực hành</h4>
                     <p>Phối hợp chuỗi công cụ AI đa dạng để kiến tạo bộ Slide thuyết trình 8 trang giới thiệu "Ngành Ngôn ngữ Anh" có chiều sâu, mang tính thẩm mỹ cao cho học sinh phổ thông.</p>
@@ -1797,7 +1766,7 @@
         <div class="drawer-content">
             <button class="close-drawer" onclick="closeDrawer('drawer-b6')">✕</button>
             <div class="drawer-body">
-                <h2>Sử dụng AI có trách nhiệm trong học tập & nghiên cứu</h2>
+                <h2>Sử dụng AI có trách nhiệm trong học tập và nghiên cứu (Mục 6.4 - Bài tập 4)</h2>
                 <div class="drawer-section">
                     <h4>Mục tiêu & Đề tài học tập thực hành</h4>
                     <p>Tìm hiểu các ranh giới đạo đức số dựa trên chính sách AI của ĐHQG-HCM, thực hành viết một bài luận học thuật 1500 từ về chủ đề: <strong>"Tác động của mạng xã hội đến hành vi tiêu dùng của giới trẻ Việt Nam"</strong>.</p>

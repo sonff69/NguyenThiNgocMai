@@ -15,10 +15,11 @@
             --primary-pink-hover: #ff6b85;
             --secondary-purple: #b39ddb;
             --accent-glow: rgba(255, 141, 161, 0.45);
-            --glass-bg: rgba(20, 10, 25, 0.75);
-            --glass-border: rgba(255, 255, 255, 0.15);
+            /* Trong suốt hết cỡ với màu sắc tím hồng nhẹ nhàng */
+            --glass-bg: rgba(15, 5, 22, 0.22); 
+            --glass-border: rgba(255, 255, 255, 0.18);
             --text-main: #ffffff;
-            --text-sub: #e0e0e0;
+            --text-sub: #f5f5f5;
             --font-serif: 'Playfair Display', serif;
             --font-sans: 'Inter', sans-serif;
         }
@@ -32,7 +33,7 @@
 
         body {
             font-family: var(--font-sans);
-            background-color: #0c0510;
+            background-color: #06020c;
             color: var(--text-main);
             overflow-x: hidden;
             line-height: 1.7;
@@ -47,7 +48,7 @@
             height: 100vh;
             z-index: -3;
             overflow: hidden;
-            background: #0c0510;
+            background: #06020c;
         }
 
         #bg-video {
@@ -59,7 +60,7 @@
             object-fit: cover;
             transform: translate(-50%, -50%) rotate(90deg);
             pointer-events: none;
-            opacity: 0.55;
+            opacity: 0.6;
         }
 
         /* Dreamy overlay gradient */
@@ -69,8 +70,8 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: radial-gradient(circle at 20% 30%, rgba(255, 141, 161, 0.2), transparent 60%),
-                        radial-gradient(circle at 80% 80%, rgba(179, 157, 219, 0.2), transparent 60%);
+            background: radial-gradient(circle at 20% 30%, rgba(255, 141, 161, 0.25), transparent 60%),
+                        radial-gradient(circle at 80% 80%, rgba(179, 157, 219, 0.25), transparent 60%);
             z-index: -2;
             pointer-events: none;
         }
@@ -91,22 +92,23 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: rgba(12, 5, 16, 0.8);
+            background: rgba(6, 2, 12, 0.85);
         }
         ::-webkit-scrollbar-thumb {
             background: var(--primary-pink);
             border-radius: 4px;
         }
 
-        /* Glassmorphism utility */
+        /* Glassmorphism utility: Cực kỳ trong suốt và blur cực mạnh */
         .glass-panel {
             background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(45px);
+            -webkit-backdrop-filter: blur(45px);
             border: 1px solid var(--glass-border);
             border-radius: 20px;
-            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
         }
 
         /* Header Navigation */
@@ -120,9 +122,10 @@
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background: rgba(12, 5, 16, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(6, 2, 12, 0.4);
+            backdrop-filter: blur(35px);
+            -webkit-backdrop-filter: blur(35px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .logo {
@@ -133,6 +136,7 @@
             background: linear-gradient(135deg, #ffffff, var(--primary-pink));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         nav {
@@ -148,6 +152,7 @@
             font-size: 0.95rem;
             transition: color 0.3s;
             position: relative;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
         }
 
         nav a::after {
@@ -219,15 +224,18 @@
         /* Frosted Glass Wrapper around Hero text to guarantee maximum contrast */
         .hero-text-card {
             padding: 2.5rem;
-            background: rgba(15, 6, 20, 0.82);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(15, 5, 22, 0.18);
+            backdrop-filter: blur(50px);
+            -webkit-backdrop-filter: blur(50px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
             border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
         }
 
         .badge {
-            background: rgba(255, 141, 161, 0.15);
-            border: 1px solid rgba(255, 141, 161, 0.35);
+            background: rgba(255, 141, 161, 0.18);
+            border: 1px solid rgba(255, 141, 161, 0.4);
             color: var(--primary-pink);
             padding: 0.4rem 1.1rem;
             border-radius: 50px;
@@ -245,7 +253,7 @@
             line-height: 1.25;
             font-weight: 800;
             color: #ffffff;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
             margin-bottom: 0.8rem;
         }
 
@@ -256,7 +264,7 @@
             -webkit-text-fill-color: transparent;
             font-weight: 900;
             display: inline-block;
-            filter: drop-shadow(0px 2px 8px rgba(0,0,0,0.4));
+            filter: drop-shadow(0px 2px 10px rgba(0,0,0,0.6));
         }
 
         .hero-desc {
@@ -279,7 +287,7 @@
             height: 290px;
             border-radius: 50%;
             overflow: hidden;
-            border: 5px solid rgba(255, 255, 255, 0.18);
+            border: 5px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 0 45px var(--accent-glow);
             position: relative;
             z-index: 2;
@@ -301,7 +309,7 @@
             width: 330px;
             height: 330px;
             border-radius: 50%;
-            border: 2px dashed rgba(255, 141, 161, 0.35);
+            border: 2px dashed rgba(255, 141, 161, 0.4);
             animation: rotateOuter 28s linear infinite;
             z-index: 1;
         }
@@ -334,7 +342,7 @@
             width: 50px;
             height: 50px;
             border-radius: 12px;
-            background: rgba(255, 141, 161, 0.15);
+            background: rgba(255, 141, 161, 0.18);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -391,6 +399,7 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
         }
 
         .section-header h2 {
@@ -436,6 +445,7 @@
             font-family: var(--font-sans);
             font-size: 0.9rem;
             transition: all 0.3s ease;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
 
         .filter-tab:hover, .filter-tab.active {
@@ -461,8 +471,8 @@
 
         .assignment-card:hover {
             transform: translateY(-6px);
-            border-color: rgba(255, 141, 161, 0.4);
-            box-shadow: 0 15px 35px rgba(255, 141, 161, 0.15);
+            border-color: rgba(255, 141, 161, 0.45);
+            box-shadow: 0 15px 35px rgba(255, 141, 161, 0.2);
         }
 
         .assignment-body {
@@ -532,8 +542,9 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(12, 5, 16, 0.85);
-            backdrop-filter: blur(10px);
+            background: rgba(6, 2, 12, 0.5);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
             z-index: 1000;
             display: none;
             opacity: 0;
@@ -543,12 +554,15 @@
             padding: 2rem;
         }
 
+        /* Content inside Drawer with supreme glass style */
         .drawer-content {
             width: 100%;
             max-width: 900px;
             max-height: 85vh;
             overflow-y: auto;
-            background: rgba(20, 10, 25, 0.98);
+            background: rgba(15, 5, 22, 0.2);
+            backdrop-filter: blur(50px);
+            -webkit-backdrop-filter: blur(50px);
             border: 1px solid var(--glass-border);
             border-radius: 24px;
             padding: 3rem;
@@ -556,6 +570,7 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
             transform: scale(0.9);
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
         }
 
         .drawer-overlay.active {
@@ -571,7 +586,7 @@
             position: absolute;
             top: 1.5rem;
             right: 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             border: none;
             width: 40px;
             height: 40px;
@@ -585,7 +600,7 @@
         }
 
         .close-drawer:hover {
-            background: rgba(255, 141, 161, 0.4);
+            background: rgba(255, 141, 161, 0.45);
         }
 
         /* Content inside drawers styling */
@@ -599,12 +614,13 @@
             font-family: var(--font-serif);
             font-size: 2.2rem;
             color: #ffffff;
-            border-bottom: 2px solid rgba(255, 141, 161, 0.2);
+            border-bottom: 2px solid rgba(255, 141, 161, 0.3);
             padding-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
         }
 
         .drawer-section {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 16px;
             padding: 1.8rem;
@@ -653,7 +669,7 @@
         }
 
         .timeline-step:hover {
-            border-color: rgba(255, 141, 161, 0.3);
+            border-color: rgba(255, 141, 161, 0.35);
         }
 
         .step-num {
@@ -666,6 +682,7 @@
             justify-content: center;
             font-weight: 700;
             font-size: 0.95rem;
+            text-shadow: none;
         }
 
         .step-info h5 {
@@ -679,7 +696,7 @@
             overflow-x: auto;
             margin-top: 1rem;
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .source-table {
@@ -695,7 +712,7 @@
         }
 
         .source-table th {
-            background: rgba(255, 141, 161, 0.15);
+            background: rgba(255, 141, 161, 0.18);
             color: var(--primary-pink);
             font-weight: 700;
             text-transform: uppercase;
@@ -709,6 +726,7 @@
 
         .rating-stars {
             color: #ffca28;
+            text-shadow: none;
         }
 
         /* Interactive Sandbox for Assignment 3 */
@@ -716,7 +734,7 @@
             display: flex;
             gap: 0.8rem;
             margin-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.12);
             padding-bottom: 0.8rem;
         }
 
@@ -729,6 +747,7 @@
             font-weight: 600;
             transition: color 0.3s;
             position: relative;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
         }
 
         .sandbox-tab.active {
@@ -761,7 +780,7 @@
         }
 
         .prompt-box {
-            background: rgba(255,255,255,0.02);
+            background: rgba(255,255,255,0.01);
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 12px;
             padding: 1.5rem;
@@ -773,7 +792,7 @@
 
         .prompt-box.advanced {
             border-top-color: var(--primary-pink);
-            background: rgba(255, 141, 161, 0.04);
+            background: rgba(255, 141, 161, 0.03);
         }
 
         .prompt-box h5 {
@@ -784,13 +803,14 @@
 
         .prompt-box code {
             display: block;
-            background: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0.4);
             padding: 0.8rem;
             border-radius: 8px;
             font-size: 0.85rem;
             color: #ff8da1;
             white-space: pre-wrap;
             font-family: monospace;
+            text-shadow: none;
         }
 
         /* Summary Challenges / Difficulties & Lessons Section */
@@ -804,7 +824,7 @@
             margin-top: 2rem;
             border-radius: 16px;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .table-summary th, .table-summary td {
@@ -815,10 +835,11 @@
         }
 
         .table-summary th {
-            background: rgba(20, 10, 25, 0.95);
+            background: rgba(15, 5, 22, 0.4);
             color: var(--primary-pink);
             font-family: var(--font-serif);
             font-size: 1.3rem;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
         }
 
         .table-summary ul {
@@ -867,7 +888,7 @@
             display: flex;
             flex-direction: column;
             gap: 1.2rem;
-            background: rgba(12, 5, 16, 0.9);
+            background: rgba(6, 2, 12, 0.92);
         }
 
         footer p {
@@ -1568,7 +1589,7 @@
         <div class="drawer-content">
             <button class="close-drawer" onclick="closeDrawer('drawer-b5')">✕</button>
             <div class="drawer-body">
-                <h2>Sử dụng AI tạo sinh hỗ trợ sáng tạo nội dung số</h2>
+                <h2>Sáng tạo nội dung slide tích hợp AI</h2>
                 <div class="drawer-section">
                     <h4>Mục tiêu thực hành</h4>
                     <p>Phối hợp chuỗi công cụ AI đa dạng để kiến tạo bộ Slide thuyết trình 8 trang giới thiệu "Ngành Ngôn ngữ Anh" có chiều sâu, mang tính thẩm mỹ cao cho học sinh phổ thông.</p>
@@ -1770,7 +1791,6 @@
 
         // 5. Assignment 3 Interactive Sandbox Toggling
         function switchSandbox(event, taskId) {
-            // Find parent drawer of current trigger button
             const parentDrawer = event.target.closest('.drawer-body');
             const tabs = parentDrawer.querySelectorAll('.sandbox-tab');
             const contents = parentDrawer.querySelectorAll('.sandbox-content');

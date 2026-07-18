@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Thị Ngọc Mai Portfolio</title>
-    <!-- Google Fonts: Playfair Display & Inter -->
+    <title>Nguyễn Thị Ngọc Mai • Digital Portfolio</title>
+    <!-- Google Fonts: Lora (Dreamy & Classy) & Inter (Modern & Clean) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -16,11 +16,11 @@
             --secondary-purple: #b39ddb;
             --accent-glow: rgba(255, 141, 161, 0.45);
             /* Trong suốt hết cỡ với màu sắc tím hồng nhẹ nhàng */
-            --glass-bg: rgba(15, 5, 22, 0.22); 
-            --glass-border: rgba(255, 255, 255, 0.18);
+            --glass-bg: rgba(10, 4, 18, 0.15); 
+            --glass-border: rgba(255, 255, 255, 0.15);
             --text-main: #ffffff;
-            --text-sub: #f5f5f5;
-            --font-serif: 'Playfair Display', serif;
+            --text-sub: #f0f0f0;
+            --font-serif: 'Lora', serif;
             --font-sans: 'Inter', sans-serif;
         }
 
@@ -33,7 +33,7 @@
 
         body {
             font-family: var(--font-sans);
-            background-color: #06020c;
+            background-color: #04010a;
             color: var(--text-main);
             overflow-x: hidden;
             line-height: 1.7;
@@ -48,7 +48,7 @@
             height: 100vh;
             z-index: -3;
             overflow: hidden;
-            background: #06020c;
+            background: #04010a;
         }
 
         #bg-video {
@@ -60,7 +60,7 @@
             object-fit: cover;
             transform: translate(-50%, -50%) rotate(90deg);
             pointer-events: none;
-            opacity: 0.6;
+            opacity: 0.65;
         }
 
         /* Dreamy overlay gradient */
@@ -70,8 +70,8 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: radial-gradient(circle at 20% 30%, rgba(255, 141, 161, 0.25), transparent 60%),
-                        radial-gradient(circle at 80% 80%, rgba(179, 157, 219, 0.25), transparent 60%);
+            background: radial-gradient(circle at 20% 30%, rgba(255, 141, 161, 0.2), transparent 60%),
+                        radial-gradient(circle at 80% 80%, rgba(179, 157, 219, 0.2), transparent 60%);
             z-index: -2;
             pointer-events: none;
         }
@@ -92,7 +92,7 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: rgba(6, 2, 12, 0.85);
+            background: rgba(4, 1, 10, 0.9);
         }
         ::-webkit-scrollbar-thumb {
             background: var(--primary-pink);
@@ -102,11 +102,11 @@
         /* Glassmorphism utility: Cực kỳ trong suốt và blur cực mạnh */
         .glass-panel {
             background: var(--glass-bg);
-            backdrop-filter: blur(45px);
-            -webkit-backdrop-filter: blur(45px);
+            backdrop-filter: blur(48px);
+            -webkit-backdrop-filter: blur(48px);
             border: 1px solid var(--glass-border);
             border-radius: 20px;
-            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
         }
@@ -122,7 +122,7 @@
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background: rgba(6, 2, 12, 0.4);
+            background: rgba(4, 1, 10, 0.35);
             backdrop-filter: blur(35px);
             -webkit-backdrop-filter: blur(35px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -133,10 +133,8 @@
             font-size: 1.7rem;
             font-weight: 800;
             letter-spacing: 0.5px;
-            background: linear-gradient(135deg, #ffffff, var(--primary-pink));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
         }
 
         nav {
@@ -152,7 +150,7 @@
             font-size: 0.95rem;
             transition: color 0.3s;
             position: relative;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+            text-shadow: 0 1px 4px rgba(0,0,0,0.6);
         }
 
         nav a::after {
@@ -224,13 +222,13 @@
         /* Frosted Glass Wrapper around Hero text to guarantee maximum contrast */
         .hero-text-card {
             padding: 2.5rem;
-            background: rgba(15, 5, 22, 0.18);
+            background: rgba(10, 4, 18, 0.22);
             backdrop-filter: blur(50px);
             -webkit-backdrop-filter: blur(50px);
             border: 1px solid rgba(255, 255, 255, 0.18);
             border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+            text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
         }
 
         .badge {
@@ -253,7 +251,7 @@
             line-height: 1.35;
             font-weight: 800;
             color: #ffffff; /* Toàn bộ chữ trắng tinh khiết */
-            text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
+            text-shadow: 0 2px 16px rgba(0, 0, 0, 0.95);
             margin-bottom: 0.8rem;
         }
 
@@ -262,7 +260,7 @@
             color: #ffffff;
             font-weight: 900;
             display: inline-block;
-            text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
+            text-shadow: 0 2px 16px rgba(0, 0, 0, 0.95);
             background: none;
             -webkit-background-clip: initial;
             -webkit-text-fill-color: initial;
@@ -352,7 +350,7 @@
 
         .obj-card h3 {
             font-family: var(--font-serif);
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-weight: 700;
         }
 
@@ -387,7 +385,7 @@
         }
 
         .info-card p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 600;
             font-family: var(--font-serif);
         }
@@ -400,7 +398,7 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         .section-header h2 {
@@ -543,7 +541,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(6, 2, 12, 0.5);
+            background: rgba(4, 1, 10, 0.55);
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur(25px);
             z-index: 1000;
@@ -561,14 +559,14 @@
             max-width: 900px;
             max-height: 85vh;
             overflow-y: auto;
-            background: rgba(15, 5, 22, 0.2);
-            backdrop-filter: blur(50px);
-            -webkit-backdrop-filter: blur(50px);
+            background: rgba(10, 4, 18, 0.22);
+            backdrop-filter: blur(48px);
+            -webkit-backdrop-filter: blur(48px);
             border: 1px solid var(--glass-border);
             border-radius: 24px;
             padding: 3rem;
             position: relative;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.75);
             transform: scale(0.9);
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
@@ -632,7 +630,7 @@
 
         .drawer-section h4 {
             color: var(--primary-pink);
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             text-transform: uppercase;
             letter-spacing: 0.8px;
             font-weight: 700;
@@ -839,7 +837,7 @@
             background: rgba(15, 5, 22, 0.4);
             color: var(--primary-pink);
             font-family: var(--font-serif);
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             text-shadow: 0 1px 4px rgba(0,0,0,0.5);
         }
 
@@ -879,6 +877,127 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+        }
+
+        /* Visual File Explorer Simulation for Assignment 1 */
+        .explorer-mock {
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #00ffcc;
+        }
+
+        .explorer-tree {
+            padding-left: 1.5rem;
+            border-left: 1px dashed rgba(255,255,255,0.2);
+            margin: 0.5rem 0;
+        }
+
+        /* Interactive Kanban (Trello style) for Assignment 4 */
+        .kanban-mock {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .kanban-col {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        .kanban-col h6 {
+            color: var(--primary-pink);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 0.4rem;
+        }
+
+        .kanban-card {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .kanban-card:hover {
+            transform: scale(1.03);
+            border-color: rgba(255,141,161,0.3);
+        }
+
+        /* Presentation Carousel for Assignment 5 */
+        .slide-carousel {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .carousel-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .carousel-btn:hover {
+            background: var(--primary-pink);
+        }
+
+        /* Responsive 3D Cards Grid for Assignment 6 */
+        .ethical-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .ethical-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 1.2rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .ethical-card:hover {
+            background: rgba(255, 141, 161, 0.05);
+            border-color: var(--primary-pink);
+            transform: translateY(-5px);
+        }
+
+        .ethical-card h6 {
+            color: var(--primary-pink);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ethical-card p {
+            font-size: 0.85rem;
+            color: var(--text-sub);
         }
 
         /* Footer */
@@ -921,6 +1040,9 @@
                 align-items: center;
             }
             .prompt-compare-grid {
+                grid-template-columns: 1fr;
+            }
+            .kanban-mock {
                 grid-template-columns: 1fr;
             }
             .hero-title {
@@ -1238,6 +1360,26 @@
                     <h4>Mục tiêu thực hành</h4>
                     <p>Rèn luyện kỹ năng tổ chức, quản lý tập tin khoa học trên hệ điều hành Windows thông qua các thao tác chuẩn chỉnh, hạn chế tối đa rủi ro mất tài liệu học tập.</p>
                 </div>
+                
+                <!-- Interactive File Explorer Simulation -->
+                <div class="drawer-section">
+                    <h4>Mô phỏng tương tác thư mục ảo (Thử click để xem phân cấp)</h4>
+                    <div class="explorer-mock">
+                        <span>📁 Local Disk (D:)</span>
+                        <div class="explorer-tree">
+                            <span style="color:#ff8da1; cursor:pointer;" onclick="alert('Thư mục gốc thực hành của Nguyễn Thị Ngọc Mai')">📁 ThucHanh_NguyenThiNgocMai</span>
+                            <div class="explorer-tree">
+                                <span style="color:#b39ddb; cursor:pointer;" onclick="alert('Thư mục con chứa tài liệu học tập')">📁 TaiLieu</span>
+                                <div class="explorer-tree">
+                                    <span style="color:#ffffff;">📄 GhiChuQuanTrong.txt (Đã Copy sang đây)</span><br>
+                                    <span style="color:#ffffff; text-decoration: line-through; opacity:0.5;">📄 DiChuyen.txt (Đã bị xóa vĩnh viễn)</span>
+                                </div>
+                                <span style="color:#ffffff;">📄 GhiChuQuanTrong.txt (Bản gốc)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="drawer-section">
                     <h4>Chi tiết quy trình thực hành 12 bước chuẩn xác</h4>
                     <div class="timeline-container">
@@ -1556,16 +1698,38 @@
                     <h4>Mục tiêu dự án nhóm</h4>
                     <p>Ứng dụng bộ 4 công cụ trực tuyến Trello, Google Docs, Google Drive và Microsoft Teams để nâng cao hiệu suất cộng tác môn Language & Media (Langmed), phân công nhiệm vụ mảng <code>Interview Analysis & Script</code>.</p>
                 </div>
+                
+                <!-- Interactive Kanban Mockup -->
+                <div class="drawer-section">
+                    <h4>Mô phỏng bảng Kanban nhóm của Ngọc Mai (Click các thẻ để kiểm tra)</h4>
+                    <div class="kanban-mock">
+                        <div class="kanban-col">
+                            <h6>To Do</h6>
+                            <div class="kanban-card" onclick="alert('Nhiệm vụ: Lên đề cương phỏng vấn chung')">📝 Outline Script</div>
+                            <div class="kanban-card" onclick="alert('Nhiệm vụ: Tìm kiếm tư liệu bối cảnh')">🔍 Research Media</div>
+                        </div>
+                        <div class="kanban-col">
+                            <h6>Doing</h6>
+                            <div class="kanban-card" style="border-left: 3px solid var(--primary-pink);" onclick="alert('Ngọc Mai đang phụ trách phân tích nội dung phỏng vấn')">👩‍💻 Ngọc Mai: Interview Analysis</div>
+                            <div class="kanban-card" onclick="alert('Nhóm đang biên soạn kịch bản chi tiết')">✍️ Script Draft</div>
+                        </div>
+                        <div class="kanban-col">
+                            <h6>Done</h6>
+                            <div class="kanban-card" style="opacity: 0.7;" onclick="alert('Đã hoàn tất phân chia công việc')">✅ Task Division</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="drawer-section">
                     <h4>Đánh giá hiệu quả & Giải pháp khắc phục thực tế</h4>
                     <ul>
                         <li>
-                            <strong>Trello (Quản lý dự án):</strong> Trực quan hóa tiến độ thông qua hệ thống thẻ việc. 
+                            <strong>Trello (Quản lý dự án):</strong> Trực quan hóa tiến độ thông qua hệ thống thẻ việc (checklists cho Opening, Body, Closing). 
                             <br><span style="color: var(--primary-pink);">*Thách thức:</span> Khi dồn nhiều thẻ việc vào cùng thời điểm, việc quản lý thứ tự ưu tiên gặp khó khăn.
                             <br><span style="color: #00ffcc;">*Giải pháp:</span> Đặt thời hạn (Deadline) chi tiết cho từng checklist con, chủ động rà soát bảng 2-3 lần mỗi tuần.
                         </li>
                         <li>
-                            <strong>Google Docs (Soạn thảo cộng tác):</strong> Nhiều người cùng đóng góp chỉnh sửa một bài luận đồng thời.
+                            <strong>Google Docs (Soạn thảo cộng tác):</strong> Nhiều người cùng đóng góp chỉnh sửa một bài luận đồng thời. Ghi nhận rõ đóng góp của Ngọc Mai ở mục *III. Briefing the interviewee*.
                             <br><span style="color: var(--primary-pink);">*Thách thức:</span> Xảy ra xung đột định dạng font chữ và nội dung khi hai thành viên cùng sửa một đoạn văn.
                             <br><span style="color: #00ffcc;">*Giải pháp:</span> Thống nhất mẫu định dạng (Template) từ đầu, khuyến khích sử dụng chế độ "Suggesting" thay vì chỉnh sửa đè trực tiếp.
                         </li>
@@ -1595,6 +1759,22 @@
                     <h4>Mục tiêu thực hành</h4>
                     <p>Phối hợp chuỗi công cụ AI đa dạng để kiến tạo bộ Slide thuyết trình 8 trang giới thiệu "Ngành Ngôn ngữ Anh" có chiều sâu, mang tính thẩm mỹ cao cho học sinh phổ thông.</p>
                 </div>
+
+                <!-- Presentation Slide Carousel Mockup -->
+                <div class="drawer-section">
+                    <h4>Mô phỏng 8 Slide Thuyết Trình do Ngọc Mai biên tập</h4>
+                    <div class="slide-carousel">
+                        <div id="carousel-slide-content">
+                            <h5 style="color: var(--primary-pink); margin-bottom: 0.5rem;" id="slide-title">Slide 1: Trang mở đầu</h5>
+                            <p id="slide-body" style="font-size: 0.95rem; color: var(--text-sub);">"Ngành Ngôn ngữ Anh - Cánh cửa hội nhập toàn cầu" (Họ và tên người thuyết trình, lớp/trường).</p>
+                        </div>
+                        <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                            <button class="carousel-btn" onclick="prevSlide()">◀ Trước</button>
+                            <button class="carousel-btn" onclick="nextSlide()">Sau ▶</button>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="drawer-section">
                     <h4>Quy trình sáng tạo 4 bước chi tiết</h4>
                     <ul>
@@ -1606,7 +1786,7 @@
                 </div>
                 <div class="drawer-section">
                     <h4>Sự kiểm chứng của con người (Yếu tố quyết định)</h4>
-                    <p>Mặc dù AI tạo ra các dữ liệu thô rất nhanh chóng, Ngọc Mai đã tự tay chỉnh sửa lại một số lập luận sáo rỗng của Claude, tái tạo các chi tiết vẽ sai lỗi của Bing Image Creator và bố cục lại vị trí các hình khối của Canva AI để bộ slide mang đậm dấu ấn cá nhân chân thực nhất.</p>
+                    <p>Mặc dù AI tạo ra các dữ liệu thô rất nhanh chóng, Ngọc Mai đã tự tay chỉnh sửa lại một số lập luận sáo rỗng của Claude, tái tạo các chi tiết vẽ sai lỗi của Bing Image Creator (lỗi méo hình người) và bố cục lại vị trí các hình khối của Canva AI để bộ slide mang đậm dấu ấn cá nhân chân thực nhất.</p>
                 </div>
             </div>
         </div>
@@ -1622,13 +1802,49 @@
                     <h4>Mục tiêu & Đề tài học tập thực hành</h4>
                     <p>Tìm hiểu các ranh giới đạo đức số dựa trên chính sách AI của ĐHQG-HCM, thực hành viết một bài luận học thuật 1500 từ về chủ đề: <strong>"Tác động của mạng xã hội đến hành vi tiêu dùng của giới trẻ Việt Nam"</strong>.</p>
                 </div>
+
+                <!-- Personal Responsible AI Guidelines Cards -->
+                <div class="drawer-section">
+                    <h4>Bộ 7 nguyên tắc đạo đức sử dụng AI của Ngọc Mai</h4>
+                    <div class="ethical-grid">
+                        <div class="ethical-card">
+                            <h6>1. Minh bạch</h6>
+                            <p>Luôn khai báo rõ ràng công cụ AI đã dùng khi nộp bài.</p>
+                        </div>
+                        <div class="ethical-card">
+                            <h6>2. Tư duy chủ động</h6>
+                            <p>Mọi kết luận trong bài viết phải tự tay phân tích.</p>
+                        </div>
+                        <div class="ethical-card">
+                            <h6>3. Kiểm chứng nguồn</h6>
+                            <p>Xác minh 100% tài liệu học thuật thực tế để tránh ảo giác số.</p>
+                        </div>
+                        <div class="ethical-card">
+                            <h6>4. Phát triển kỹ năng</h6>
+                            <p>Ưu tiên tự thực hành trước, dùng AI để hỗ trợ sửa lỗi sau.</p>
+                        </div>
+                        <div class="ethical-card">
+                            <h6>5. Bảo mật dữ liệu</h6>
+                            <p>Không đưa dữ liệu bảo mật lên các chatbot AI công cộng.</p>
+                        </div>
+                        <div class="ethical-card">
+                            <h6>6. Đặt câu hỏi phản biện</h6>
+                            <p>Tiếp cận phản hồi của AI với tinh thần nghi ngờ khoa học.</p>
+                        </div>
+                        <div class="ethical-card">
+                            <h6>7. Học hỏi từ AI</h6>
+                            <p>Dùng AI làm người cố vấn, không làm người viết thay.</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="drawer-section">
                     <h4>Quy trình viết luận 4 bước an toàn học thuật</h4>
                     <p>Để đảm bảo không bị lệ thuộc vào trí tuệ nhân tạo, Ngọc Mai đã xây dựng một chu trình khép kín kiểm soát chặt chẽ tỷ lệ đóng góp của AI chỉ ở mức 15-20%:</p>
                     <ul>
                         <li><strong>Bước 1:</strong> Sử dụng Claude để lên dàn bài đề xuất khung và gợi ý tìm kiếm các học thuyết chính (như lý thuyết chấp nhận công nghệ TAM, mô hình S-O-R, thuyết so sánh xã hội của Festinger).</li>
                         <li><strong>Bước 2:</strong> Bản thân tự đọc tài liệu và viết hoàn toàn 100% nội dung thô để đảm bảo văn phong tự nhiên và tính lập luận nguyên bản.</li>
-                        <li><strong>Bước 3:</strong> Đưa bài viết thô cho Claude nhận xét, phản biện chỉ ra 3 điểm yếu lập luận logic của văn bản.</li>
+                        <li><strong>Bước 3:</strong> Đưa bài viết thô cho Claude nhận xét, phản biện chỉ ra 3 điểm yếu lập luận logic của văn bản mà không nhờ viết lại.</li>
                         <li><strong>Bước 4:</strong> Bản thân tự tìm kiếm số liệu thực chứng đáng tin cậy từ báo cáo <code>We Are Social 2024</code> để bổ sung và hoàn thiện bài nghiên cứu.</li>
                     </ul>
                 </div>
@@ -1805,6 +2021,34 @@
                     c.classList.add('active');
                 }
             });
+        }
+
+        // 6. Assignment 5 Slide Carousel Control
+        const slides = [
+            { title: "Slide 1: Trang mở đầu", body: "Ngành Ngôn ngữ Anh - Cánh cửa hội nhập toàn cầu (Họ và tên người thuyết trình, lớp/trường)." },
+            { title: "Slide 2: Giới thiệu chung", body: "Tìm hiểu định nghĩa, mục tiêu đào tạo của ngành Ngôn ngữ Anh cùng các hướng chuyên sâu chính như Biên-phiên dịch, Sư phạm, Tiếng Anh thương mại, và Du lịch." },
+            { title: "Slide 3: Chương trình học tiêu biểu", body: "Rèn luyện 4 kỹ năng ngôn ngữ cốt lõi, nâng cao kiến thức ngữ âm, ngữ pháp, từ vựng học thuật, kỹ năng dịch thuật và nghiên cứu văn hóa xã hội." },
+            { title: "Slide 4: Cơ hội nghề nghiệp (1)", body: "Trở thành Biên dịch viên dịch sách/phim, Phiên dịch viên hội nghị, hoặc Giáo viên/Giảng viên tiếng Anh tại các trường học." },
+            { title: "Slide 5: Cơ hội nghề nghiệp (2)", body: "Thử sức với các vị trí năng động: Nhân viên đối ngoại, Marketing/Truyền thông quốc tế, hoặc chuyên viên Du lịch - Khách sạn tại công ty đa quốc gia." },
+            { title: "Slide 6: Kỹ năng cần có", body: "Tiếng Anh thành thạo 4 kỹ năng, kết hợp kỹ năng mềm (giao tiếp, làm việc nhóm, tư duy phản biện), thấu hiểu văn hóa và ứng dụng công cụ công nghệ số." },
+            { title: "Slide 7: Lời khuyên định hướng", body: "Chăm chỉ tự học mỗi ngày, nâng cao vốn sống qua phim ảnh/sách báo, thi chứng chỉ quốc tế và tích cực tham gia các dự án thực tế." },
+            { title: "Slide 8: Lời kết & Câu hỏi", body: "Tổng kết các lý do lựa chọn ngành học, khuyến khích học sinh chủ động tìm hiểu và sẵn sàng mở hộp thư đặt câu hỏi thảo luận." }
+        ];
+        let currentSlideIdx = 0;
+
+        function updateSlide() {
+            document.getElementById('slide-title').innerText = slides[currentSlideIdx].title;
+            document.getElementById('slide-body').innerText = slides[currentSlideIdx].body;
+        }
+
+        function nextSlide() {
+            currentSlideIdx = (currentSlideIdx + 1) % slides.length;
+            updateSlide();
+        }
+
+        function prevSlide() {
+            currentSlideIdx = (currentSlideIdx - 1 + slides.length) % slides.length;
+            updateSlide();
         }
     </script>
 </body>
